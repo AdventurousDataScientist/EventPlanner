@@ -1,0 +1,10 @@
+{% extends "main/base.html" %}
+{% block title %}Create Event{% endblock %}
+{% block content %}
+<h1>This is the create event page</h1>
+<form method="post">
+    {% csrf_token %}
+    {{form.as_p}}
+    <button type="submit">Create New Event</button>
+</form>
+{% endblock %}
