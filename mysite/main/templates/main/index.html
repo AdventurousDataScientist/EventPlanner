@@ -1,8 +1,9 @@
-{% extends "main/base.html" %}
+{% extends "main/not_authenticated.html" %}
 {% block title %}Event Info Page{% endblock %}
-
-{% block content %}
 <h1>Event Information Page</h1>
-<p>Event Name: {{e.name}}</p>
-<p>Event Date: {{e.date}}</p>
+{% block content %}
+     {% for e in user.events.all %}
+        <p>Event Name: {{e.name}}</p>
+        <p>Event Date: {{e.date}}</p>
+     {% endfor %}
 {% endblock %}

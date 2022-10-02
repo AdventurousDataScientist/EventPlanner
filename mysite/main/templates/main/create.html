@@ -1,7 +1,7 @@
-{% extends "main/base.html" %}
+{% extends "main/not_authenticated.html" %}
 {% block title %}Create Event{% endblock %}
-{% block content %}
 <h1>This is the create event page</h1>
+{% block content %}
 <form method="post">
     {% csrf_token %}
     {{form.as_p}}
